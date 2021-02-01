@@ -15,6 +15,7 @@
 *::after {
     box-sizing: inherit;
 }
+
 html {
     box-sizing: border-box;
     /* Default font size is 16px
@@ -198,17 +199,23 @@ h2 {
     box-shadow: 0.5rem 0.5rem 1rem black;
 }
 
-.content-block img {
+.content-block-lh {
     align-self: flex-start;
-    padding-top: 6rem;
+    margin: 3rem;
+}
+
+.content-block-lh img {
     max-width: 377px;
     max-height: 282px;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem gray;
 }
 
 .content-block-rh {
     display: flex;
     flex-direction: column;
-    padding: 6rem 1rem;
+    margin: 2rem 1rem;
     max-width: 50%;
 }
 
@@ -222,7 +229,7 @@ h2 {
         margin: 25rem 0 5rem 0;
     }
 
-    .content-block img {
+    .content-block-lh {
         align-self: center;
         flex-shrink: 1;
         width: 75%;

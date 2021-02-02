@@ -24,6 +24,7 @@ html {
     */
     font-size: 62.5%;
     scroll-behavior: smooth;
+    background-image: linear-gradient(62deg, var(--main-red) 0%, #7c0101 100%);
 }
 
 /* 1200 px / 16px = 75em */
@@ -178,25 +179,28 @@ h2 {
 .main-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: var(--main-red);
-    background-image: linear-gradient(62deg, var(--main-red) 0%, #7c0101 100%);
+    padding-top: 15rem;
 }
 
 .content-block {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     border-radius: 1rem;
     height: auto;
-    margin-top: 10rem;
     width: 90%;
     max-width: 1280px;
     background: white;
     box-shadow: 0.5rem 0.5rem 1rem black;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0%;
 }
 
 .content-block-lh {
@@ -226,7 +230,11 @@ h2 {
 @media (max-width : 90em) {
     .content-block {
         flex-direction: column;
-        margin: 25rem 0 5rem 0;
+        margin: 0 0 2rem 0;
+    }
+
+    .main-section {
+        padding-top: 20rem;
     }
 
     .content-block-lh {
@@ -237,6 +245,12 @@ h2 {
 
     .content-block-rh {
         max-width: 85%;
+    }
+}
+
+@media (max-width : 60em) {
+    .main-section {
+        padding-top: 25rem;
     }
 }
 
@@ -273,6 +287,61 @@ h2 {
     width: 100%;
     margin: auto;
     object-fit: cover;
+}
+
+/* Bedtime section */
+
+#bedtime-section {
+    margin-bottom: 2rem;
+}
+
+.content-block-1col {
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1280px;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem black;
+}
+
+.content-block-1col a {
+    text-decoration: underline;
+}
+
+.head-content {
+    padding: 1rem;
+    margin: 0 2rem;
+    text-align: center;
+}
+
+.head-content p {
+    padding-top: 2rem;
+}
+
+.onecol-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.onecol-flex div {
+    padding: 0 2rem;
+}
+
+.onecol-flex h2 {
+    text-align: left;
+}
+
+.onecol-flex img {
+    width: auto;
+    border-radius: 50%;
+    border-width: 0.3rem;
+    border-style: solid;
+    border-color: red;
 }
 
 /* Footer styling */
